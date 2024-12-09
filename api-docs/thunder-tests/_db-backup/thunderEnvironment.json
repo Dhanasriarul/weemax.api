@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "abdd0e58-cd02-4419-8cb9-8621adbf53e3",
+    "name": "Local",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-05-06T14:53:33.467Z",
+    "modified": "2023-05-06T14:53:33.467Z",
+    "data": [
+      {
+        "name": "API_URL",
+        "value": "http://localhost:5000/api"
+      },
+      {
+        "name": "accessToken",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJkZXYiLCJlbWFpbCI6ImRldkBnbWFpbC5jb20iLCJpYXQiOjE2ODc4MjEzOTQsImV4cCI6MTY4NzgyMjI5NH0.qLg1cjUgAWcUjTfVwM5prJOFUDCfQVCFTcg_WzWLQ0E"
+      },
+      {
+        "name": "refreshToken",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJkZXYiLCJlbWFpbCI6ImRldkBnbWFpbC5jb20iLCJpYXQiOjE2ODc4MDgxMDUsImV4cCI6MTY4ODY3MjEwNX0.qHlB-YIvD8Mvvp7_LPH6M5xylEIeSKfh2J2nd4LViao"
+      }
+    ]
+  }
+]

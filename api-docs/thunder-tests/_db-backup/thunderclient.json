@@ -1,0 +1,563 @@
+[
+  {
+    "_id": "a0bdb360-3d28-41a1-9737-62f85748c57d",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "43ee2d60-8bd1-4685-aad3-8ca6c05613ba",
+    "name": "Login",
+    "url": "{{API_URL}}/auth/login",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-05-05T16:04:29.323Z",
+    "modified": "2023-06-25T14:52:34.693Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"dev@gmail.com\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.accessToken",
+        "action": "setto",
+        "value": "{{accessToken}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.refreshToken",
+        "action": "setto",
+        "value": "{{refreshToken}}"
+      }
+    ]
+  },
+  {
+    "_id": "9c65327f-8f39-4595-a61b-44a35b95e3bd",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "43ee2d60-8bd1-4685-aad3-8ca6c05613ba",
+    "name": "Refresh Token",
+    "url": "{{API_URL}}/auth/refresh-token?token={{refreshToken}}",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-05-05T16:34:53.964Z",
+    "modified": "2023-06-23T14:10:17.071Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "token",
+        "value": "{{refreshToken}}",
+        "isPath": false
+      }
+    ],
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.accessToken",
+        "action": "setto",
+        "value": "{{accessToken}}"
+      }
+    ]
+  },
+  {
+    "_id": "f2aa3bfe-1514-4234-94b4-d45a77a249ec",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "43ee2d60-8bd1-4685-aad3-8ca6c05613ba",
+    "name": "Register",
+    "url": "{{API_URL}}/auth/register",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-05-06T10:54:20.736Z",
+    "modified": "2023-06-26T00:56:27.505Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"dev\",\n  \"email\": \"dev@gmail.com\",\n  \"mobile\": \"9112233449\",\n  \"password\": \"123\",\n  \"referralCode\": \"\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "dbe2bb36-c53a-4a2c-8346-b967e6ec3c3d",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "428d6c4d-7dcd-4357-b110-97b994f2a250",
+    "name": "Profile",
+    "url": "{{API_URL}}/user/profile",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-06-17T16:57:07.479Z",
+    "modified": "2023-06-19T03:42:17.309Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "defe0553-0a23-42fe-813c-61d869984e42",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "",
+    "name": "Product",
+    "url": "{{API_URL}}/product/1",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-06-18T13:11:05.288Z",
+    "modified": "2023-06-18T17:15:25.698Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "964bfcb7-84ea-4956-808a-ada90e7cc55c",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+    "name": "Add Wishlist",
+    "url": "{{API_URL}}/product/wishlist?productId=1",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-06-18T13:25:44.810Z",
+    "modified": "2023-06-18T18:49:13.496Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "productId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9ee16078-1dd2-4d7d-8280-f34551bb4a56",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+    "name": "Remove Wishlist",
+    "url": "{{API_URL}}/product/wishlist?productId=1",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-06-18T17:50:17.746Z",
+    "modified": "2023-06-18T17:50:58.791Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "productId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "1a1845b8-5b10-4b0a-b0f7-c9b4fa1e483a",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+    "name": "All Wishlist",
+    "url": "{{API_URL}}/product/wishlist/all",
+    "method": "GET",
+    "sortNum": 5000,
+    "created": "2023-06-18T18:16:19.820Z",
+    "modified": "2023-06-18T18:17:38.163Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "34f86bea-a430-4d8d-b7de-359acfae3738",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+    "name": "All Basket",
+    "url": "{{API_URL}}/product/basket/all",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-06-18T18:49:58.071Z",
+    "modified": "2023-06-18T18:50:24.078Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6da3b809-63e2-4e10-928b-4608546d507e",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+    "name": "Add Basket",
+    "url": "{{API_URL}}/product/basket?productId=3&quantity=3",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2023-06-18T18:50:38.157Z",
+    "modified": "2023-06-26T01:15:42.307Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "productId",
+        "value": "3",
+        "isPath": false
+      },
+      {
+        "name": "quantity",
+        "value": "3",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "50a70256-855e-4c71-98d3-bc2743834dbe",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+    "name": "Update Basket Item Count",
+    "url": "{{API_URL}}/product/basket?productId=1&quantity=2",
+    "method": "PUT",
+    "sortNum": 80000,
+    "created": "2023-06-18T19:12:00.748Z",
+    "modified": "2023-06-25T15:20:24.006Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "productId",
+        "value": "1",
+        "isPath": false
+      },
+      {
+        "name": "quantity",
+        "value": "2",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "ae576388-c8b0-4fdc-948f-3e0f0d33084e",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+    "name": "Remove Basket Item",
+    "url": "{{API_URL}}/product/basket?productId=1",
+    "method": "DELETE",
+    "sortNum": 90000,
+    "created": "2023-06-18T19:13:52.539Z",
+    "modified": "2023-06-25T15:21:51.039Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "productId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "770283c9-28d6-47cf-beed-9317fddebe86",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "c2c7217d-749e-415e-b299-f0540045a12e",
+    "name": "All Address",
+    "url": "{{API_URL}}/user/profile/getAllAddresses",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-06-18T20:03:52.035Z",
+    "modified": "2023-06-19T03:41:51.262Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "98231fd6-c08d-473b-9bda-4b8917f9c562",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "c2c7217d-749e-415e-b299-f0540045a12e",
+    "name": "Add Address",
+    "url": "{{API_URL}}/user/profile/addAddress",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-06-18T20:11:41.562Z",
+    "modified": "2023-06-26T11:05:09.128Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"addressLineOne\": \"No:78, street\",\n  \"addressLineTwo\": \"location\",\n  \"city\": \"Chennai\",\n  \"state\": \"Tamil nadu\",\n  \"zipCode\": \"600064\",\n  \"isDefault\": 1\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0ae39533-aaf0-4395-86df-26f1f690df6e",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "c2c7217d-749e-415e-b299-f0540045a12e",
+    "name": "Edit Address",
+    "url": "{{API_URL}}/user/profile/editAddress",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2023-06-19T03:06:50.497Z",
+    "modified": "2023-06-25T15:10:11.477Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"addressId\": 1,\n  \"addressLineOne\": \"1123 Main St\",\n  \"addressLineTwo\": \"1Apt 4B\",\n  \"city\": \"1Example City\",\n  \"state\": \"1Example State\",\n  \"zipCode\": \"112345\",\n  \"isDefault\": 0\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "99514632-7aae-4d75-8ed1-8e1f89dd6934",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "c2c7217d-749e-415e-b299-f0540045a12e",
+    "name": "Remove Address",
+    "url": "{{API_URL}}/user/profile/deleteAddress?addressId=1",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-06-19T03:14:11.740Z",
+    "modified": "2023-06-19T03:41:57.318Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "addressId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "999e186c-68c8-4c49-863e-dc58da24808d",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "ffd34a68-b02f-4b46-b6e1-32b626272dee",
+    "name": "All Payment Methods",
+    "url": "{{API_URL}}/user/profile/getAllPaymentMethods",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-06-19T03:42:45.723Z",
+    "modified": "2023-06-19T03:51:23.210Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f3ca5cfd-39ac-4b4c-83cc-f188f2d40659",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "ffd34a68-b02f-4b46-b6e1-32b626272dee",
+    "name": "Add Payment Method",
+    "url": "{{API_URL}}/user/profile/addPaymentMethod",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-06-19T03:51:35.452Z",
+    "modified": "2023-06-19T04:05:19.499Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"paymentType\": \"credit_card\",\n  \"details\": {\n    \"cardNumber\":1234567891,\n    \"cardHolderName\":\"Yugi\",\n    \"expirationDate\":\"28/10/2003\"\n  }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5cbb67d9-6977-462c-8568-2447dd8f904b",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "ffd34a68-b02f-4b46-b6e1-32b626272dee",
+    "name": "Edit Payment Method",
+    "url": "{{API_URL}}/user/profile/editPaymentMethod",
+    "method": "PUT",
+    "sortNum": 110000,
+    "created": "2023-06-19T04:17:48.255Z",
+    "modified": "2023-06-25T15:13:33.243Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"paymentMethodId\": 1,\n  \"details\": {\n    \"upiId\": \"yyugi\"\n  }\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "dc105b02-1cbc-4ffa-8e80-4f4e202cc458",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "ffd34a68-b02f-4b46-b6e1-32b626272dee",
+    "name": "Remove Payment Method",
+    "url": "{{API_URL}}/user/profile/removePaymentMethod?paymentMethodId=1",
+    "method": "DELETE",
+    "sortNum": 120000,
+    "created": "2023-06-19T07:34:49.724Z",
+    "modified": "2023-06-19T07:36:28.536Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "paymentMethodId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4d2acefb-f0ff-4896-9151-9d416a4ea224",
+    "colId": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "containerId": "428d6c4d-7dcd-4357-b110-97b994f2a250",
+    "name": "Edit Profile",
+    "url": "{{API_URL}}/user/profile",
+    "method": "PUT",
+    "sortNum": 130000,
+    "created": "2023-06-21T15:39:44.925Z",
+    "modified": "2023-06-25T15:14:43.844Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"userName\": \"YYugi\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "7ecc30f5-e2a2-4182-86d2-d6000c766b0e",
+    "colId": "eaf57e7b-41e5-4a0e-8883-96b7f9465020",
+    "containerId": "",
+    "name": "GET Page ",
+    "url": "{{API_URL}}/page/getPage?route=/test",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-06-23T15:22:31.990Z",
+    "modified": "2023-06-23T15:23:32.138Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "route",
+        "value": "/test",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "c596682b-bbd9-4646-971c-612f9119eda3",
+    "colId": "eaf57e7b-41e5-4a0e-8883-96b7f9465020",
+    "containerId": "",
+    "name": "GET Sections",
+    "url": "{{API_URL}}/page/getSections?pageId=1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-06-23T16:07:31.777Z",
+    "modified": "2023-06-23T16:12:19.308Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "pageId",
+        "value": "1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "e5f2e331-d2a2-4ffc-8da3-363d155ff1cc",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+    "name": "Place order",
+    "url": "{{API_URL}}/checkout/placeOrder",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-06-24T21:23:13.399Z",
+    "modified": "2023-06-26T22:11:41.724Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"addressId\": 1,\n  \"state\": \"Tamil Nadu\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5a759281-2103-40a8-be87-1533c34fb641",
+    "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "containerId": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+    "name": "Order Summary",
+    "url": "{{API_URL}}/checkout/orderSummary",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-06-26T01:18:51.423Z",
+    "modified": "2023-06-26T22:08:59.916Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"addressId\": 1,\n  \"state\": \"Tamil Nadu\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  }
+]

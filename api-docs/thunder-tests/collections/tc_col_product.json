@@ -1,0 +1,516 @@
+{
+    "_id": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "colName": "Product",
+    "created": "2023-06-18T13:10:55.675Z",
+    "sortNum": 20000,
+    "folders": [
+        {
+            "_id": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+            "name": "WIshlist",
+            "containerId": "",
+            "created": "2023-06-18T17:50:03.954Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "85343843-200a-4d24-bb1d-c831975301e3",
+            "name": "Basket",
+            "containerId": "",
+            "created": "2023-06-18T18:49:48.639Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+            "name": "Checkout",
+            "containerId": "",
+            "created": "2023-06-24T21:23:00.807Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "cf1967f4-24f7-4c05-b89a-acabba3dd950",
+            "name": "Orders",
+            "containerId": "",
+            "created": "2023-07-29T11:49:22.501Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "defe0553-0a23-42fe-813c-61d869984e42",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "",
+            "name": "Product",
+            "url": "{{API_URL}}/product/13",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-18T13:11:05.288Z",
+            "modified": "2023-07-17T12:41:19.248Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "964bfcb7-84ea-4956-808a-ada90e7cc55c",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+            "name": "Add Wishlist",
+            "url": "{{API_URL}}/product/wishlist?productId=1",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-18T13:25:44.810Z",
+            "modified": "2023-06-18T18:49:13.496Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9ee16078-1dd2-4d7d-8280-f34551bb4a56",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+            "name": "Remove Wishlist",
+            "url": "{{API_URL}}/product/wishlist?productId=1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-06-18T17:50:17.746Z",
+            "modified": "2023-06-18T17:50:58.791Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1a1845b8-5b10-4b0a-b0f7-c9b4fa1e483a",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+            "name": "All Wishlist",
+            "url": "{{API_URL}}/product/wishlist/all",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-06-18T18:16:19.820Z",
+            "modified": "2023-06-28T14:23:23.594Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "34f86bea-a430-4d8d-b7de-359acfae3738",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+            "name": "All Basket",
+            "url": "{{API_URL}}/product/basket/all",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-06-18T18:49:58.071Z",
+            "modified": "2023-06-18T18:50:24.078Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "6da3b809-63e2-4e10-928b-4608546d507e",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+            "name": "Add Basket",
+            "url": "{{API_URL}}/product/basket?productId=2&quantity=1",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-06-18T18:50:38.157Z",
+            "modified": "2023-06-30T12:57:31.986Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "quantity",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "50a70256-855e-4c71-98d3-bc2743834dbe",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+            "name": "Update Basket Item Count",
+            "url": "{{API_URL}}/product/basket?productId=1&quantity=2",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2023-06-18T19:12:00.748Z",
+            "modified": "2023-06-25T15:20:24.006Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "quantity",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae576388-c8b0-4fdc-948f-3e0f0d33084e",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "85343843-200a-4d24-bb1d-c831975301e3",
+            "name": "Remove Basket Item",
+            "url": "{{API_URL}}/product/basket?productId=2",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2023-06-18T19:13:52.539Z",
+            "modified": "2023-06-28T06:16:44.887Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productId",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e5f2e331-d2a2-4ffc-8da3-363d155ff1cc",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+            "name": "Place order",
+            "url": "{{API_URL}}/checkout/placeOrder?addressId=47&state=tn&orderUUID=asdasd",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-06-24T21:23:13.399Z",
+            "modified": "2023-08-10T14:08:28.038Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "addressId",
+                    "value": "47",
+                    "isPath": false
+                },
+                {
+                    "name": "state",
+                    "value": "tn",
+                    "isPath": false
+                },
+                {
+                    "name": "orderUUID",
+                    "value": "asdasd",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5a759281-2103-40a8-be87-1533c34fb641",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+            "name": "Order Summary",
+            "url": "{{API_URL}}/checkout/orderSummary?addressId=47&state=tn",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-06-26T01:18:51.423Z",
+            "modified": "2023-08-10T13:26:15.152Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "addressId",
+                    "value": "47",
+                    "isPath": false
+                },
+                {
+                    "name": "state",
+                    "value": "tn",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "79f6cc23-ec1f-48d7-a483-ffd68cb6e767",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+            "name": "Text referl",
+            "url": "{{API_URL}}/checkout/testRefer?userId=8",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-06-29T06:17:19.023Z",
+            "modified": "2023-07-13T16:59:21.457Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "8",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "33c505e4-b34b-4dbb-a98c-d4bfd989073c",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cf1967f4-24f7-4c05-b89a-acabba3dd950",
+            "name": "Order History",
+            "url": "{{API_URL}}/product/orders/all",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-29T21:54:29.600Z",
+            "modified": "2023-06-29T22:01:16.954Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "81d444a5-473d-40d8-a6fd-f9c40d60782f",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "",
+            "name": "Selected Products",
+            "url": "{{API_URL}}/selectedproduct?productIds=13,14,15,13",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2023-07-17T12:47:31.042Z",
+            "modified": "2023-07-17T12:55:46.206Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "productIds",
+                    "value": "13,14,15,13",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "68352f83-cff3-46a1-a6e6-90176bd84b6f",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "",
+            "name": "ProductList",
+            "url": "{{API_URL}}/product/products/all",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2023-07-28T11:50:12.396Z",
+            "modified": "2023-07-28T17:05:16.070Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "categoryId",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "subCategoryId",
+                    "value": "1",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "keyword",
+                    "value": "breath",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sort",
+                    "value": "coinsHighToLow",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "type",
+                    "value": "dress",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "normalPriceRange",
+                    "value": "100-200",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "offerPriceRange",
+                    "value": "500-1000",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "coinsRange",
+                    "value": "5-10",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "be435ccf-b175-49f9-a49b-8019e5884ebf",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "",
+            "name": "GET Categories",
+            "url": "{{API_URL}}/product/category",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-07-28T17:21:29.511Z",
+            "modified": "2023-07-28T17:21:55.145Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "baa34b13-acb3-4b2c-af83-00f59bc8829a",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "",
+            "name": "GET Sub Categories",
+            "url": "{{API_URL}}/product/category/1",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2023-07-28T17:25:31.157Z",
+            "modified": "2023-07-28T17:25:37.613Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "44da8d01-eebc-4ccb-9ead-0aa6db9bb26d",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cf1967f4-24f7-4c05-b89a-acabba3dd950",
+            "name": "Cancel Orders",
+            "url": "{{API_URL}}/product/orders/cancel?orderId=19&orderUUID=c17c5c9d-65b6-45fd-b1ec-191525937d3a",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2023-07-29T11:50:11.219Z",
+            "modified": "2023-07-31T05:52:30.030Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "orderId",
+                    "value": "19",
+                    "isPath": false
+                },
+                {
+                    "name": "orderUUID",
+                    "value": "c17c5c9d-65b6-45fd-b1ec-191525937d3a",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"orderItemId\": [25],\n  \"reason\": \"Reason\",\n  \"refundMethod\": \"bank\",\n  \"refundData\": {\n    \"accHolderName\": \"Yugi\",\n    \"accNo\": \"111111111\",\n    \"bankName\": \"TEST\",\n    \"ifscCode\": \"TEST1234\"\n  }\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c410ebed-328c-4c11-80da-9a64009ec67f",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cf1967f4-24f7-4c05-b89a-acabba3dd950",
+            "name": "GET Order",
+            "url": "{{API_URL}}/product/orders/details/26",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2023-07-29T11:56:44.543Z",
+            "modified": "2023-08-04T14:23:24.735Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "1804c9ca-a479-4a37-88cb-961bf09c07a6",
+            "colId": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+            "containerId": "cf1967f4-24f7-4c05-b89a-acabba3dd950",
+            "name": "Request Return",
+            "url": "{{API_URL}}/product/orders/return",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2023-08-01T16:18:14.118Z",
+            "modified": "2023-08-01T16:22:30.316Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"orderId\": \"22\",\r\n    \"returnItems\": [\r\n        {\r\n            \"productId\": 11,\r\n            \"orderItemId\": 29,\r\n            \"reason\": \"asd\",\r\n            \"proofOne\": \"https://api.weemax.in/api/page/public/7682302c-9635-4af8-906b-a8b8b7ddecc7Frame 5.png\",\r\n            \"proofTwo\": \"https://api.weemax.in/api/page/public/7682302c-9635-4af8-906b-a8b8b7ddecc7Frame 5.png\"\r\n        }\r\n    ],\r\n    \"refundMethod\": \"bank\",\r\n    \"bankDetails\": {\r\n        \"accountHolderName\": \"Yugendiran\",\r\n        \"bankName\": \"asd\",\r\n        \"accountNumber\": \"asd\",\r\n        \"ifscCode\": \"asd\"\r\n    }\r\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{accessToken}}"
+            },
+            "tests": []
+        }
+    ]
+}

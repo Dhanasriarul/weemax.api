@@ -1,0 +1,22 @@
+{
+    "_id": "b7ec478d-727a-4262-9383-6cb429afe582",
+    "name": "Prod",
+    "default": false,
+    "sortNum": 20000,
+    "created": "2023-11-20T12:28:54.538Z",
+    "modified": "2023-11-20T12:28:54.538Z",
+    "data": [
+        {
+            "name": "API_URL",
+            "value": "https://api.weemax.in/api"
+        },
+        {
+            "name": "accessToken",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI5LCJuYW1lIjoiWXVnZW5kaXJhbiBHIiwiZW1haWwiOiJ5dWdlbmRpcmFuMjgyOUBnbWFpbC5jb20iLCJpYXQiOjE2OTIyODgxODMsImV4cCI6MTY5MzU4NDE4M30.d1EX9Z9uzd2Lb6IrRRW0Lr89y-o3kWkEd9qiVNdmWc8"
+        },
+        {
+            "name": "refreshToken",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjI5LCJuYW1lIjoiWXVnZW5kaXJhbiBHIiwiZW1haWwiOiJ5dWdlbmRpcmFuMjgyOUBnbWFpbC5jb20iLCJpYXQiOjE2OTIyODgxODMsImV4cCI6MTY5NDg4MDE4M30.Q2899bGbrl1C2SoykmBqhcJkv2pgAqmZb_givSpkeoI"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "32a30dca-3b6c-4c2a-90e2-761c23788d9c",
+    "colName": "Accounts",
+    "created": "2023-05-05T16:04:00.595Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "428d6c4d-7dcd-4357-b110-97b994f2a250",
+        "name": "Profile",
+        "containerId": "",
+        "created": "2023-06-18T20:02:25.105Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "43ee2d60-8bd1-4685-aad3-8ca6c05613ba",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2023-06-18T20:02:31.360Z",
+        "sortNum": 5000
+      },
+      {
+        "_id": "c2c7217d-749e-415e-b299-f0540045a12e",
+        "name": "Address",
+        "containerId": "428d6c4d-7dcd-4357-b110-97b994f2a250",
+        "created": "2023-06-19T03:41:49.126Z",
+        "sortNum": 40000
+      },
+      {
+        "_id": "ffd34a68-b02f-4b46-b6e1-32b626272dee",
+        "name": "Payment Methods",
+        "containerId": "428d6c4d-7dcd-4357-b110-97b994f2a250",
+        "created": "2023-06-19T03:42:29.420Z",
+        "sortNum": 50000
+      }
+    ]
+  },
+  {
+    "_id": "b3d612c5-9f0c-4641-9837-cb6546fccffa",
+    "colName": "Product",
+    "created": "2023-06-18T13:10:55.675Z",
+    "sortNum": 20000,
+    "folders": [
+      {
+        "_id": "dd9a4c30-6771-44e7-87fa-768be2904bc9",
+        "name": "WIshlist",
+        "containerId": "",
+        "created": "2023-06-18T17:50:03.954Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "85343843-200a-4d24-bb1d-c831975301e3",
+        "name": "Basket",
+        "containerId": "",
+        "created": "2023-06-18T18:49:48.639Z",
+        "sortNum": 30000
+      },
+      {
+        "_id": "cfbb4407-133b-4e3e-8610-a335dfe4ca71",
+        "name": "Checkout",
+        "containerId": "",
+        "created": "2023-06-24T21:23:00.807Z",
+        "sortNum": 40000
+      }
+    ]
+  },
+  {
+    "_id": "eaf57e7b-41e5-4a0e-8883-96b7f9465020",
+    "colName": "Page",
+    "created": "2023-06-23T15:22:22.830Z",
+    "sortNum": 30000,
+    "folders": []
+  }
+]

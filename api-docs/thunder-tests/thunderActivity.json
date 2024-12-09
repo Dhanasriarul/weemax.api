@@ -1,0 +1,55 @@
+[
+    {
+        "_id": "75d69681-9477-4c48-86ab-404d6e2bf993",
+        "colId": "history",
+        "containerId": "",
+        "name": "{{API_URL}}/status",
+        "url": "{{API_URL}}/status",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-06-17T16:24:31.234Z",
+        "modified": "2023-06-17T16:24:31.234Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "c85eb205-75d4-4297-8711-413764884a30",
+        "colId": "history",
+        "containerId": "",
+        "name": "{{API_URL}}/page/upload",
+        "url": "{{API_URL}}/page/upload",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2024-01-23T08:44:03.545Z",
+        "modified": "2024-01-23T08:44:03.545Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "29f794a1-710c-4d89-9255-aefcf1e9d9c4",
+        "colId": "history",
+        "containerId": "",
+        "name": "{{API_URL}}/page/upload",
+        "url": "{{API_URL}}/page/upload",
+        "method": "POST",
+        "sortNum": 0,
+        "created": "2024-01-23T08:44:06.063Z",
+        "modified": "2024-01-23T08:45:01.531Z",
+        "headers": [],
+        "params": [],
+        "body": {
+            "type": "formdata",
+            "raw": "",
+            "form": [],
+            "files": [
+                {
+                    "name": "image",
+                    "value": "..\\..\\..\\..\\Downloads\\certificate-6244371-5117408.png"
+                }
+            ]
+        },
+        "tests": []
+    }
+]
